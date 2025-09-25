@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: "Match Image & Word",
       theme: ThemeData(
         useMaterial3: true,
-        colorSchemeSeed: Colors.orangeAccent,
+        colorSchemeSeed: Colors.teal, // changed theme seed
       ),
       home: const MatchGame(),
     );
@@ -99,7 +99,7 @@ class _MatchGameState extends State<MatchGame> {
     if (current == null) return const SizedBox();
 
     return Scaffold(
-      backgroundColor: const Color(0xFFFFF3E0), // soft warm background
+      backgroundColor: const Color(0xFFE0F7FA), // light teal background
       appBar: AppBar(
         title: const Text(
           "Match Image & Word",
@@ -110,7 +110,7 @@ class _MatchGameState extends State<MatchGame> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.deepOrangeAccent,
+        backgroundColor: Colors.teal, // teal appbar
         elevation: 4,
       ),
       body: Column(
@@ -121,7 +121,7 @@ class _MatchGameState extends State<MatchGame> {
             style: const TextStyle(
               fontSize: 28,
               fontWeight: FontWeight.bold,
-              color: Colors.deepOrange,
+              color: Colors.teal,
             ),
           ),
           const SizedBox(height: 20),
@@ -135,7 +135,7 @@ class _MatchGameState extends State<MatchGame> {
                   boxShadow: const [
                     BoxShadow(
                       blurRadius: 12,
-                      color: Colors.orangeAccent,
+                      color: Colors.tealAccent,
                       offset: Offset(3, 3),
                     )
                   ],
@@ -154,11 +154,10 @@ class _MatchGameState extends State<MatchGame> {
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
                             vertical: 18, horizontal: 28),
-                        backgroundColor:
-                            Colors.orangeAccent.shade100, // playful button
+                        backgroundColor: Colors.teal.shade100, // button bg
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20)),
-                        shadowColor: Colors.orange.shade200,
+                        shadowColor: Colors.teal.shade200,
                         elevation: 6,
                       ),
                       child: Text(
@@ -166,7 +165,7 @@ class _MatchGameState extends State<MatchGame> {
                         style: const TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepOrange,
+                          color: Colors.teal, // text teal
                         ),
                       ),
                     ))

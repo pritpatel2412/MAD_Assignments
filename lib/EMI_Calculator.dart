@@ -14,7 +14,7 @@ class EMIApp extends StatelessWidget {
       title: "EMI Calculator",
       theme: ThemeData(
         useMaterial3: true,
-        colorSchemeSeed: Colors.teal,
+        colorSchemeSeed: Colors.indigo,
       ),
       home: const EMICalculator(),
     );
@@ -65,7 +65,7 @@ class _EMICalculatorState extends State<EMICalculator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFFF8E1), // soft yellow background
+      backgroundColor: const Color(0xFFEDE7F6), // soft lavender background
       appBar: AppBar(
         title: const Text(
           "EMI Calculator",
@@ -75,7 +75,7 @@ class _EMICalculatorState extends State<EMICalculator> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.deepOrangeAccent,
+        backgroundColor: Colors.indigo, // deep indigo appbar
         elevation: 4,
       ),
       body: SingleChildScrollView(
@@ -86,19 +86,19 @@ class _EMICalculatorState extends State<EMICalculator> {
                 controller: loanController,
                 label: "Loan Amount",
                 icon: Icons.money,
-                color: Colors.orangeAccent),
+                color: Colors.purpleAccent),
             const SizedBox(height: 20),
             buildTextField(
                 controller: rateController,
                 label: "Interest Rate (%)",
                 icon: Icons.percent,
-                color: Colors.greenAccent),
+                color: Colors.tealAccent),
             const SizedBox(height: 20),
             buildTextField(
                 controller: tenureController,
                 label: "Tenure (Months)",
                 icon: Icons.calendar_today,
-                color: Colors.lightBlueAccent),
+                color: Colors.blueAccent),
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: calculateEMI,
@@ -109,15 +109,15 @@ class _EMICalculatorState extends State<EMICalculator> {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 backgroundColor: Colors.transparent,
-                shadowColor: Colors.deepOrangeAccent,
+                shadowColor: Colors.deepPurple,
                 elevation: 5,
               ),
               child: Ink(
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
-                    colors: [Colors.deepOrange, Colors.orangeAccent],
+                    colors: [Colors.indigo, Colors.deepPurpleAccent],
                   ),
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
                 child: Container(
                   alignment: Alignment.center,
@@ -139,7 +139,7 @@ class _EMICalculatorState extends State<EMICalculator> {
                       style: const TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepOrange)),
+                          color: Colors.indigo)),
                   const SizedBox(height: 10),
                   Text("Total Payment: ₹${totalPayment!.toStringAsFixed(2)}",
                       style: const TextStyle(
